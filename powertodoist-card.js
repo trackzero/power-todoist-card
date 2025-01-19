@@ -999,7 +999,7 @@ class PowerTodoistCard extends LitElement {
                                     : html`` }
                                 ${this.renderLabels(item, 
                                     // labels:
-                                    [this.myConfig.show_dates && item.due ? dateFormat(item.due.date, "🗓 dd-mmm H'h'MM") : [],
+                                    [this.myConfig.show_dates && item.due ? dateFormat(item.due.date, "🗓 " + (this.config.date_format ? this.config.date_format : "dd-mmm H'h'MM")) : [],
                                      ...item.labels].filter(String), // filter removes the empty []s
                                     // exclusions:
                                     [...(cardLabels.length == 1 ? cardLabels : []), // card labels excluded unless more than one
