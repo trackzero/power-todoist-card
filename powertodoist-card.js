@@ -1,4 +1,6 @@
-import {LitElement, html, css} from 'https://unpkg.com/lit-element@3.3.2/lit-element.js?module';
+import {LitElement, html, css, unsafeCSS} from "https://cdn.jsdelivr.net/npm/lit-element@2.4.0/+esm?module";
+//import {LitElement, html, css} from 'https://unpkg.com/lit-element@3.3.2/lit-element.js?module';
+
 // TODO: register with HACS: https://hacs.xyz/docs/publish/start
 
 const todoistColors = {
