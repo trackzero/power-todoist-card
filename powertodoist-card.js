@@ -1300,8 +1300,8 @@ class PowerTodoistCard extends LitElement {
     }
 }
 
-customElements.define('powertodoist-card-editor', PowerTodoistCardEditor);
-customElements.define('powertodoist-card', PowerTodoistCard);
+customElements.define('powertodoist-card-editor', PowerTodoistCardEditorv2);
+customElements.define('powertodoist-card', PowerTodoistCardv2);
 
 window.customCards = window.customCards || [];
 window.customCards.push({
@@ -1312,25 +1312,9 @@ window.customCards.push({
 });
 
 console.info(
-    '%c POWERTODOIST-CARD ',
+    '%c POWERTODOIST-CARDV2 ',
     'color: white; background: orchid; font-weight: 700',
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
