@@ -325,7 +325,7 @@ class PowerTodoistCard extends LitElement {
     }
     
     static getConfigElement() {
-        return document.createElement('powertodoist-card-editor');
+        return document.createElement('powertodoist-cardv2-editor');
     }
 
     setConfig(config) {
@@ -353,7 +353,7 @@ class PowerTodoistCard extends LitElement {
     
     itemAdd(e) {
         if (e.which === 13) {
-            let input = this.shadowRoot.getElementById('powertodoist-card-item-add');
+            let input = this.shadowRoot.getElementById('powertodoist-cardv2-item-add');
             let value = input.value;
             
             if (value && value.length > 1) {
@@ -1127,7 +1127,7 @@ class PowerTodoistCard extends LitElement {
         let rendered = html`
             ${(this.config.show_item_add === undefined) || (this.config.show_item_add !== false)
             ? html`<input
-            id="powertodoist-card-item-add"
+            id="powertodoist-cardv2-item-add"
             type="text"
             class="powertodoist-item-add"
             placeholder="New item..."
@@ -1300,13 +1300,13 @@ class PowerTodoistCard extends LitElement {
     }
 }
 
-customElements.define('powertodoist-card-editor', PowerTodoistCardEditorv2);
-customElements.define('powertodoist-card', PowerTodoistCardv2);
+customElements.define('powertodoist-cardv2-editor', PowerTodoistCardEditorv2);
+customElements.define('powertodoist-cardv2', PowerTodoistCardv2);
 
 window.customCards = window.customCards || [];
 window.customCards.push({
     preview: true,
-    type: 'powertodoist-card',
+    type: 'powertodoist-cardv2',
     name: 'PowerTodoist Card',
     description: 'Custom card to interact with Todoist items.',
 });
