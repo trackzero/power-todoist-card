@@ -41,7 +41,7 @@ function replaceMultiple(str2Replace, mapReplaces, was, input){
     });
 }
 
-class PowerTodoistCardEditor extends LitElement {
+class PowerTodoistCardEditorv2 extends LitElement {
     static get properties() {
         return {
             hass: Object,
@@ -1300,7 +1300,7 @@ class PowerTodoistCard extends LitElement {
     }
 }
 
-customElements.define('powertodoist-cardv2-editor', PowerTodoistCardEditorv2);
+customElements.define('powertodoist-card-editorv2', PowerTodoistCardEditorv2);
 customElements.define('powertodoist-cardv2', PowerTodoistCardv2);
 
 window.customCards = window.customCards || [];
