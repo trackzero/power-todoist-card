@@ -307,7 +307,7 @@ class PowerTodoistCardEditorv2 extends LitElement {
 }
 
 
-class PowerTodoistCard extends LitElement {
+class PowerTodoistCardv2 extends LitElement {
     constructor() {
         super();
 
