@@ -41,7 +41,7 @@ function replaceMultiple(str2Replace, mapReplaces, was, input){
     });
 }
 
-class PowerTodoistCardEditorv2 extends LitElement {
+class PowerTodoistCardEditor extends LitElement {
     static get properties() {
         return {
             hass: Object,
@@ -307,7 +307,7 @@ class PowerTodoistCardEditorv2 extends LitElement {
 }
 
 
-class PowerTodoistCardv2 extends LitElement {
+class PowerTodoistCard extends LitElement {
     constructor() {
         super();
 
@@ -325,7 +325,7 @@ class PowerTodoistCardv2 extends LitElement {
     }
     
     static getConfigElement() {
-        return document.createElement('powertodoist-cardv2-editor');
+        return document.createElement('powertodoist-card-editor');
     }
 
     setConfig(config) {
@@ -353,7 +353,7 @@ class PowerTodoistCardv2 extends LitElement {
     
     itemAdd(e) {
         if (e.which === 13) {
-            let input = this.shadowRoot.getElementById('powertodoist-cardv2-item-add');
+            let input = this.shadowRoot.getElementById('powertodoist-card-item-add');
             let value = input.value;
             
             if (value && value.length > 1) {
@@ -1127,7 +1127,7 @@ class PowerTodoistCardv2 extends LitElement {
         let rendered = html`
             ${(this.config.show_item_add === undefined) || (this.config.show_item_add !== false)
             ? html`<input
-            id="powertodoist-cardv2-item-add"
+            id="powertodoist-card-item-add"
             type="text"
             class="powertodoist-item-add"
             placeholder="New item..."
@@ -1300,19 +1300,19 @@ class PowerTodoistCardv2 extends LitElement {
     }
 }
 
-customElements.define('powertodoist-card-editorv2', PowerTodoistCardEditorv2);
-customElements.define('powertodoist-cardv2', PowerTodoistCardv2);
+customElements.define('powertodoist-card-editor', PowerTodoistCardEditor);
+customElements.define('powertodoist-card', PowerTodoistCard);
 
 window.customCards = window.customCards || [];
 window.customCards.push({
     preview: true,
-    type: 'powertodoist-cardv2',
+    type: 'powertodoist-card',
     name: 'PowerTodoist Card',
     description: 'Custom card to interact with Todoist items.',
 });
 
 console.info(
-    '%c POWERTODOIST-CARDV2 ',
+    '%c POWERTODOIST-CARD ',
     'color: white; background: orchid; font-weight: 700',
 );
 
