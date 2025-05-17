@@ -952,7 +952,7 @@ class PowerTodoistCard extends LitElement {
 
         items = this.filterDates(items);
         items = this.filterPriority(items);
-	    items = this.sortByLabel(items);
+	items = this.sortByLabel(items);
         
         // filter by section:
         let section_name2id = [];
