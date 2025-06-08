@@ -902,7 +902,7 @@ class PowerTodoistCard extends LitElement {
 
 
 	sortByLabel(items) {
-	  if (!this.myConfig.sort_by_label) return items;        // feature off
+	  if (!this.myConfig.sort_by_label || this.myConfig.sort_by_label === "false") return items;        // feature off or explicitly "false"
 
 	  const dir = this.myConfig.sort_by_label === 'descending' ? -1 : 1;
 
